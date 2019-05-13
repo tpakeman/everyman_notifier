@@ -8,7 +8,7 @@ import json
 
 def scrape_everyman(venues: list, timeconfig: dict=None):
     """
-    INPUT: venues: list, times: dict
+    INPUT: venues: list, timeconfig: dict
     ----------------------------------------------------------------------
     ----------------------------------------------------------------------
     venues     |  An array of everyman venues to scrape film times
