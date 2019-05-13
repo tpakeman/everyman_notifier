@@ -50,4 +50,4 @@ coverage.xml
 docs/_build/
 
 # Custom configuration (contains sensitive information)
-config.json
+config/config.json

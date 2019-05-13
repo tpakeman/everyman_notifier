@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3.6
 import requests
 from bs4 import BeautifulSoup
-from film_template import templates
+from modules.film_template import templates
 
 
 def scrape_everyman(venues: list, timeconfig: dict=None):
