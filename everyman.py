@@ -2,7 +2,6 @@
 import requests
 from bs4 import BeautifulSoup
 from film_template import templates
-from mail import send_html_mail
 import json
 
 
@@ -17,12 +16,10 @@ def scrape_everyman(venues: list, timeconfig: dict=None):
                |  return data for all times.
 
 
-    OUTPUT: html -> str, data -> dict, plaintext -> str
+    OUTPUT: data -> dict
     ----------------------------------------------------------------------
     ----------------------------------------------------------------------
-    html       |  A string containing HTML data to use in an email
     data       |  A json representation of the film data
-    plaintext  |  A plaintext version of the HTML to use in an email
 
     """
     base = "https://www.everymancinema.com"
@@ -63,3 +60,28 @@ def scrape_everyman(venues: list, timeconfig: dict=None):
                 html += templates['end_times']
                 plaintext += f"\n"
     return html, data, plaintext
+
+
+def compose_email(film_data: dict):
+    """
+    INPUT: film_data: dict
+    ----------------------------------------------------------------------
+    ----------------------------------------------------------------------
+    film_data  |  A json / dict containing the everyman film data as
+                  returned by the scrape_everman function
+
+    OUTPUT: html -> str, data -> dict, plaintext -> str
+    ----------------------------------------------------------------------
+    ----------------------------------------------------------------------
+    html       |  A string containing HTML data to use in an email
+    plaintext  |  A plaintext version of the HTML to use in an email
+
+    """
+    html = templates['title']
+    plaintext = ''
+    pass
+
+if __name__ == '__main__':
+    with open('film_data.json', 'r') as f:
+        data = json.loads(f.read())
+    compose_email(data)
