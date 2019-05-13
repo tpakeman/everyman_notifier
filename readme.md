@@ -36,7 +36,6 @@
 
 ## TO DO 
 * Fix issue of no matching times on a given day
-* Separate scraping and html / text formatting functions
 * Rotten tomatoes API to show user and critic scores
 * Improve email formatting, e.g. multiple columns
 * Make configuration easier - add argparser to make it CLI compatible
