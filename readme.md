@@ -28,7 +28,9 @@
 
 ## Requirements
 * Python 3.6+
-* requests, beautiful soup (bs4) with lxml parser, smtp and email libraries 
+* requests, beautiful soup (bs4) with lxml parser, smtp and email libraries
+* A gmail or hotmail email account to send mail from. 
+   * _NB using gmail will require you to ['allow access to less secure apps'](https://support.google.com/accounts/answer/6010255?hl=en)_
 
 
 ## TO DO 
