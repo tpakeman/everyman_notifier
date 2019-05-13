@@ -5,7 +5,7 @@ import json
 
 
 if __name__ == '__main__':
-    CONFIG = 'demo_config.json'
+    CONFIG = 'config.json'
     with open(CONFIG, 'r', encoding='UTF-8') as f:
         config = json.loads(f.read())
     venues = config['venues']
