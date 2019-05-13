@@ -50,4 +50,4 @@ coverage.xml
 docs/_build/
 
 # Custom configuration (contains sensitive information)
-config/config.json
+everyman_notifier/config/config.json
