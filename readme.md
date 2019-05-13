@@ -3,6 +3,7 @@
 * everyman.py contains the functions to scrape the site and return data and html to use in an email
     * _NB currently the function returns the data and the formatted html together - in the future these will be separated_
 * mail.py contains a function to send an html formatted email from gmail or hotmail
+* film_template.py contains strings containing html which are used in the everyman.py script to create the email body
 * main.py contains the main script to combine and run the functions
 * config.json contains a configuration file in json with:
     * Venues to scrape
