@@ -12,7 +12,7 @@ def scrape_everyman(venues: list, timeconfig: dict=None):
     ----------------------------------------------------------------------
     ----------------------------------------------------------------------
     venues     |  An array of everyman venues to scrape film times
-    times      |  A dict containing days of week with times in string format
+    timeconfig |  A dict containing days of week with times in string format
                |  '0000-2359' to check against. If a day is missing this will
                |  return data for all times.
 
