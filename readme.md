@@ -23,7 +23,7 @@
 ## How to run
 * Create the config file with the recipients, venues, email recipients and desired times (optional)
 * Amend main.py if desired to adjust location of config file, any email parameters and location of python installation on first line
-* Make the script executable using `chmod +x 'path/to/file'`
+* Make the `main.py` script executable using `chmod +x 'path/to/file'`
 * Add to crontab using `crontab -e` to trigger on a regular basis
 
 ## Requirements
