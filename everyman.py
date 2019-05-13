@@ -2,7 +2,6 @@
 import requests
 from bs4 import BeautifulSoup
 from film_template import templates
-import json
 
 
 def scrape_everyman(venues: list, timeconfig: dict=None):
@@ -47,10 +46,10 @@ def scrape_everyman(venues: list, timeconfig: dict=None):
                     itime = int(time.replace(':', ''))
                     if not target_times or (itime >= stime and itime <= etime):
                         data[venue][title]["times"][day].append({"screen": screen, "time": time, "booking_link": booking_link})
-    return html, data, plaintext
+    return data
 
 
-def compose_email(film_data: dict):
+def generate_html(film_data: dict):
     """
     INPUT: film_data: dict
     ----------------------------------------------------------------------
@@ -82,10 +81,3 @@ def compose_email(film_data: dict):
                 html += templates['end_times']
                 plaintext += f"\n"
     return html, plaintext
-
-
-if __name__ == '__main__':
-    with open('film_data.json', 'r') as f:
-        data = json.loads(f.read())
-    html, text = compose_email(data)
-    print(text)
