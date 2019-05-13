@@ -58,7 +58,7 @@ def scrape_everyman(venues: list, timeconfig: dict=None):
                     itime = int(time.replace(':', ''))
                     if not target_times or (itime >= stime and itime <= etime):
                         html += templates['film_times'].format(booking_link, time, screen)
-                        html == f"{time} @ {screen}:\t{booking_link}"
+                        plaintext += f"{time} @ {screen}:\t{booking_link}"
                         data[venue][title]["times"][day].append({"screen": screen, "time": time, "booking_link": booking_link})
                 html += templates['end_times']
                 plaintext += f"\n"
