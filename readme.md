@@ -1,11 +1,11 @@
 ## Summary
 #### This contains a script that scrapes the everyman cinema website for film listings and emails recipients with a neat HTML list of the showings and times
-* everyman.py contains the functions to scrape the site and return data and html to use in an email
+* `everyman.py` contains the functions to scrape the site and return data and html to use in an email
     * _NB currently the function returns the data and the formatted html together - in the future these will be separated_
-* mail.py contains a function to send an html formatted email from gmail or hotmail
-* film_template.py contains strings containing html which are used in the everyman.py script to create the email body
-* main.py contains the main script to combine and run the functions
-* config.json contains a configuration file in json with:
+* `mail.py` contains a function to send an html formatted email from gmail or hotmail
+* `film_template.py` contains strings containing html which are used in the everyman.py script to create the email body
+* `main.py` contains the main script to combine and run the functions
+* `config.json` contains a configuration file in json with:
     * Venues to scrape
         * This should be an array of venues in lowercase and hyphen separated
             * e.g. ['maida-vale', 'kings-cross']
@@ -17,7 +17,7 @@
         * e.g. {"Monday": "1800-2200"} would mean show Monday films starting between 6 and 10pm
     * Credentials of an email account (gmail or hotmail) to use
         * Credentials should be inside a dictionary called 'email' with keys gmail_user and gmail_password or hotmail_user and hotmail_password
-* _NB a demo_config.json is included in the right format, but the actual config.json has been added to .gitignore for security_
+   * _NB a demo_config.json is included in the right format, but the actual config.json has been added to .gitignore for security_
 
 
 ## How to run
