@@ -31,6 +31,7 @@ def send_mail(message,
         for r in recipients:
             msg['To'] = r
             server.sendmail(un, r, msg.as_string())
+            "Successfully sent mail to {}".format(r)
 
 
 def send_html_mail(message_text,
@@ -68,3 +69,4 @@ def send_html_mail(message_text,
         for r in recipients:
             msg['To'] = r
             server.sendmail(un, r, msg.as_string())
+            print("Successfully sent mail to {}".format(r))
